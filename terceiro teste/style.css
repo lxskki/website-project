@@ -1,0 +1,185 @@
+:root{
+    --padding:5px;
+    --cor:#ece7d5;
+    --cortexto: #000;
+}
+body{
+    background-color: #ece7d5;
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+/* .module.parallax.parallax-1{grid-area: p1;} */
+.module.parallax.parallax-2{grid-area: p2;}
+.module.parallax.parallax-3{grid-area: p3;}
+.module.parallax.parallax-4{grid-area: p4;}
+.module.parallax.parallax-5{grid-area: p5;}
+.module.parallax.parallax-6{grid-area: p6;}
+.module.parallax.parallax-7{grid-area: p7;}
+header{grid-area: h;}
+.content1{grid-area: c1;}
+.content2{grid-area: c2;}
+.content3{grid-area: c3;}
+.content4{grid-area: c4;}
+.content5{grid-area: c5;}
+.content6{grid-area: c6;}
+.content7{grid-area: c7;}
+.content8{grid-area: c8;}
+footer{grid-area: f;}
+.container{
+    display: grid;
+    height: 100vh;
+    gap: 0.5em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        "h"
+                        "c1"
+                        "p2"
+                        "c2"
+                        "p3"
+                        "c3"
+                        "p4"
+                        "c4"
+                        "p5"
+                        "c5"
+                        "p6"
+                        "c6"
+                        "p7"
+                        "f";
+}
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2em; /* Espaçamento uniforme entre os itens */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 20px;
+    margin: 20px 35px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* Ajustei a cor para o mesmo valor de --cortexto */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo da logo */
+    padding: 0.5em;
+}
+header {
+    position: relative;
+    background: url("img/Firefly_hemocentro_40454-transformed.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 60%, #000 100%);
+    z-index: 1; /* Camada acima da imagem */
+} 
+
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px;
+    z-index: 2; /* Coloca o nav acima da sombra */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+ .pesquisa{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+ }
+ .locais{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+ }
+ .titulo{
+    align-items: center;
+ }
+
+
+
+header, main, aside, section, footer{
+    background-color: var(--cor);
+    padding: var(--padding);
+    color: var(--cortexto);
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+section.module.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;*/
+}
+section.module.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+}
+/* section.module.parallax-1{
+    background-image: url("img/Design\ sem\ nome\ \(4\)\ \(2\).png");
+    height: 70vh !important;
+    background-size: cover;
+    background-repeat: no;
+} */
+section.module.parallax-2{
+    background-image: url("img/DeWatermark.ai_1725974995739.png");
+}
+section.module.parallax-3{
+    background-image: url("img/DeWatermark.ai_1726058478343.jpg");
+}
+section.module.parallax-4{
+    background-image: url("img/Firefly_posto_de_doação_de_sangue_genérico_22459-transformed.jpeg");
+}
+section.module.parallax-5{
+    background-image: url("img/Firefly\ cinco\ homens\ trabalhando\ com\ computadores\ no\ fundo\ vermelho\ e\ branco\ 91647-vmake\ \(1\).jpg");
+}
+section.module.parallax-6{
+    background-image: url("img/Firefly\ telefones\,\ emails\ e\ contatos\ 384-vmake.jpg");
+}
+section.module.parallax-7{
+    background-image: url("img/Firefly_duvidas_frequentes__balões_de_fala_vermelho_e_branco_55547-transformed.jpeg");
+}
+.content1, .content2, .content3, .content4, .content5, .content6{
+    padding: 15px;
+    margin: 15px;
+}
